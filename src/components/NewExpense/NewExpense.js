@@ -9,7 +9,6 @@ export default function NewExpense(props) {
       id: (Math.random() * 100).toString(),
     };
     props.addExpense(expenseData);
-    console.log(expenseData);
   };
   return (
     <div className="new-expense">

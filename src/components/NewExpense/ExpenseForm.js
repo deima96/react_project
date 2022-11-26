@@ -49,7 +49,6 @@ export default function ExpenseForm(props) {
       amount: enteredAmount,
       date: new Date(enteredDate),
     };
-    console.log(expenseData);
     props.expenseList(expenseData);
     setEnteredTitle("");
     setEnteredAmount(0);

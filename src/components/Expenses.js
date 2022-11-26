@@ -5,11 +5,13 @@ import "./style/expenses.css";
 
 export default function Expenses(props) {
   const onFilterHandler = (year) => {
-    console.log(year);
+    props.year(year);
   };
+
   return (
     <div className="expenses">
       <ExpenseFilter onFilter={onFilterHandler} />
+
       {props.items.map((expense) => (
         <ExpenseItem
           key={expense.id}

@@ -31,11 +31,20 @@ function App() {
       return [expense, ...prevExpenses];
     });
   };
+  const onFilterbyYr = (year) => {
+    const yr = year;
+    const returnYear = (year) => {
+      if (year === yr) return year;
+    };
+    setExpense((prevExpenses) => {
+      return [...prevExpenses].filter(returnYear);
+    });
+  };
 
   return (
     <div className="App">
       <NewExpense addExpense={addExpenseHandler} />
-      <Expenses items={expenses} />
+      <Expenses items={expenses} year={onFilterbyYr} />
     </div>
   );
 }
