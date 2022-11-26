@@ -10,6 +10,7 @@ export default function NewExpense(props) {
     };
     props.addExpense(expenseData);
   };
+
   return (
     <div className="new-expense">
       <ExpenseForm expenseList={onSaveExpenseHandler} />
